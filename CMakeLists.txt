@@ -149,6 +149,7 @@ set(engine_SRCS # Except main.cpp.
     src/infill/SierpinskiFillProvider.cpp
     src/infill/SpaghettiInfill.cpp
     src/infill/SpaghettiInfillPathGenerator.cpp
+    src/infill/SquareSubdiv.cpp
     src/infill/SubDivCube.cpp
 
     src/pathPlanning/Comb.cpp
@@ -188,7 +189,7 @@ set(engine_SRCS # Except main.cpp.
 set(engine_TEST_INFILL
     Cross3DTest
     SierpinskiFillTest
-    FractalInfillTest
+    SquareSubdivTest
 )
 set(engine_TEST_SETTINGS
     SettingsTest
