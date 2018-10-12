@@ -37,5 +37,8 @@ int main(int argc, char **argv)
 
     cura::Application::getInstance().run(argc, argv);
 
+    
+    std::cout<<"MAIN RETURN METHOD"<<std::flush<<std::endl;
+    
     return 0;
 }

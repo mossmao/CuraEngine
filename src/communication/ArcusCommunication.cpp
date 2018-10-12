@@ -350,6 +350,12 @@ bool ArcusCommunication::isSequential() const
 
 bool ArcusCommunication::hasSlice() const
 {
+ 
+    if( private_data->socket->getState() != Arcus::SocketState::Connected)
+    {
+        std::cout<<"private_data->socket->getState(): "<< private_data->socket->getState() <<" private_data->slice_count: "<< private_data->slice_count <<std::endl;
+    }
+   
     return private_data->socket->getState() != Arcus::SocketState::Closed
         && private_data->socket->getState() != Arcus::SocketState::Error
         && private_data->slice_count < 1; //Only slice once per run of CuraEngine. See documentation of slice_count.

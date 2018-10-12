@@ -224,8 +224,11 @@ void Application::run(const size_t argc, char** argv)
     }
     while (communication->hasSlice())
     {
+        //std::cout<<"communication->hasSlice(): "<< communication->hasSlice()<<std::endl;
         communication->sliceNext();
     }
+    
+    std::cout<<"POST: communication->hasSlice(): "<< communication->hasSlice() <<std::flush<<std::endl;
 }
 
 } //Cura namespace.
